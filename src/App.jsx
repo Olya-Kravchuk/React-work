@@ -1,32 +1,19 @@
 import './App.css';
 import MailBox from './components/MailBox';
-
-const mistExpressUsers = [
-  { id: 1, userEmail: 'max@example.com' },
-  { id: 2, userEmail: 'user@example.com' },
-  { id: 3, userEmail: 'coni@example.com' },
-];
-const nowaPostUsers = [
-  { id: 4, userEmail: 'lili@example.com' },
-  { id: 5, userEmail: 'pit@example.com' },
-  { id: 6, userEmail: 'codi@example.com' },
-];
-const ukrpostUsers = [
-  { id: 7, userEmail: 'mconar@example.com' },
-  { id: 8, userEmail: 'kirc@example.com' },
-  { id: 9, userEmail: 'mila@example.com' },
-];
+import mistExpressUsers from './mistExpressUsers.json';
+import nowaPostUsers from './nowaPostUsers.json';
+import ukrpostUsers from './ukrpostUsers.json';
 
 function App() {
   return (
     <div>
       <MailBox
-        boxUsers={mistExpressUsers}
+        users={mistExpressUsers}
         boxTitle="Meest Express"
         mailBoxCount={5}
       />
-      <MailBox boxUsers={nowaPostUsers} boxTitle="Nowa Post" mailBoxCount={3} />
-      <MailBox boxUsers={ukrpostUsers} boxTitle="Ukr Post" />
+      <MailBox users={nowaPostUsers} boxTitle="Nowa Post" mailBoxCount={3} />
+      <MailBox users={ukrpostUsers} boxTitle="Ukr Post" />
     </div>
   );
 }
